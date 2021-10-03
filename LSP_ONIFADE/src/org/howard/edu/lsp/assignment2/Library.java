@@ -1,14 +1,17 @@
 package org.howard.edu.lsp.assignment2;
 
+import java.util.ArrayList;
+
 public class Library {
 	string address;
-	ArrayList<Book> list;
-}
+	private ArrayList<Book> list;
+	ArrayList <Book>;
+
 	// Add the missing implementation (methods and data definitions) to this class 
 
 	// Constructor – look it up
-	public Library(String title) {
-		this.address = title;
+	public Library(String string) {
+		this.address = string;
 		this.list = new ArrayList<Book>();
 		// Implement the constructor
 	}
@@ -69,14 +72,14 @@ public class Library {
 
 	// Print opening hours and the addresses 
 	System.out.println("Library hours:");
-	firstLibrary.printOpenHours(); 
+	Library.printOpenHours(); 
 	System.out.println();
 	
 	System.out.println("Library addresses:"); 
 	firstLibrary.printAddress(); 
 	
 	System.out.println("Library hours:");
-	secondLibrary.printOpeningHours(); 
+	Library.printOpenHours(); 
 	System.out.println(); 
 	
 	System.out.println("Library addresses:"); 
