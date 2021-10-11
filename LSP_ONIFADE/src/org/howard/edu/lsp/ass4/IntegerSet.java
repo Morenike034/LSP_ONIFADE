@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author Morenike Onifade
+ * @author Morenike Onifade :)
  */
 public class IntegerSet  {
 	// Hint: probably best to use an array list.  You will need to do a little research

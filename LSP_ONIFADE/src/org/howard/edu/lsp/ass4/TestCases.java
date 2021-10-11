@@ -4,6 +4,7 @@ public class TestCases {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//test cases
 		IntegerSet list1 = new IntegerSet();
 		IntegerSet list2 = new IntegerSet();
 		IntegerSet list3 = new IntegerSet();
