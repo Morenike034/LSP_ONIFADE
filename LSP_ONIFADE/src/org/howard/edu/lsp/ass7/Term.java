@@ -28,7 +28,5 @@ public class Term {
 
 	public void settheExponent(int exp) {
 		this.exp = exp;
-	}
-	
-	
+	}	
 }

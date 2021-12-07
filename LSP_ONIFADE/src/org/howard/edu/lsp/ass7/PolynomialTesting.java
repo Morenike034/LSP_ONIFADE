@@ -10,7 +10,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class PolynomialTesting{
-	
 	public static void main(String[] args) throws FileNotFoundException {
 			
 			Scanner scan = new Scanner(new File("operations.txt"));
@@ -35,9 +34,7 @@ public class PolynomialTesting{
 					System.out.println("Operation: Delete");
 					poly.delete(Integer.valueOf(integers[1]),Integer.valueOf(integers[2]));
 					System.out.println(poly.toString());
-	
 				}
-	
 			}
 		}
 	

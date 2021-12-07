@@ -50,9 +50,7 @@ public class Polynomial{
 }
 	
 		/**
-		 * This deletes the first occurrence of a specified term from a Polynomial, or
-		 * prints an appropriate message if the term does not appear in the
-		 * Polynomial
+		 * This deletes the first occurrence of a specified term from a Polynomial, or prints a message if the term does not appear in the polynomial
 		 */
 		public void delete(int coefficient, int exponent) {
 			boolean find = false;
@@ -68,22 +66,22 @@ public class Polynomial{
 			if (!find) {
 				System.out.println("This term does not exist");
 			} else
-				System.out.println("this deletes the method: " + coefficient + " " + exponent);
+				System.out.println("deleting the method: " + coefficient + " " + exponent);
 		}
 
 		/**
-		 * Returns the product of all the terms of a Polynomial
+		 * this returns the product of all the terms of the polynomial
 		 */
 		public String product() {
 
-			int product = 1, sum = 0;
+			int prod = 1, sum = 0;
 			for (Term t : t) {
-				product *= t.gettheCoefficient();
+				prod *= t.gettheCoefficient();
 				
 				sum += t.gettheExponent();
 
 			}
-			return "the product is: " + String.valueOf(product) + "x^" + String.valueOf(sum);
+			return "the product is: " + String.valueOf(prod) + "x^" + String.valueOf(sum);
 		}
 
 		/**
@@ -102,7 +100,7 @@ public class Polynomial{
 		}
 
 		/**
-		 * Reverses the order of the terms of a Polynomial.
+		 * Reverses the order of the polynomial's terms.
 		 */
 		public void reverse() {
 			
