@@ -1,34 +1,44 @@
 package org.howard.edu.lsp.ass7;
 
-public class PolynomialTester
-{
-   public static void main(String[] args)
-   {
-      Polynomial p1 = new Polynomial();
-      Polynomial p2 = new Polynomial();
-      Polynomial p0 = new Polynomial();
-      p1.insert(3, 2);
-      p1.insert(4, 4);
-      p1.insert(1, 6);
-      p2.insert(2, 0);
-      p2.insert(5, 2);
-      p2.insert(6, 3);
-      p2.insert(2, 7);
-      p3.insert(4, 10);
-    
-     
-      Polynomial p4 = p1.polyProduct(p2);
-      System.out.println("p1 is " + p1 + "\np2 is " + p2 + "\np1*p2 is " + p4);
-    
-      Polynomial p5 = p2.polyProduct(p2);
-      System.out.println("p2 is " + p2 + "\np2*p2 is " + p5);
-    
-      Polynomial p6 = p0.polyProduct(p2);
-      System.out.println("p0 is " + p0 + "\n" + "p2 is " + p2 + "\np0*p2 is "
-                         + p6);
-    
-      p2 = p2.polyProduct(p2);
-      System.out.println("After p2 = p2*p2 p2 is " + p2);
-      System.out.println("p1 is " + p1 );
-   }
-}
+/**
+ * @author Morenike Onifade
+ */
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class PolynomialTesting{
+	
+	public static void main(String[] args) throws FileNotFoundException {
+			
+			Scanner scan = new Scanner(new File("operations.txt"));
+			Polynomial  poly = new Polynomial();
+			while (scan.hasNextLine()) {
+				String integers[] = scan.nextLine().split(" ");
+				switch (integers[0]) {
+				
+				case "insert":
+					System.out.println("Operation: Insert");
+					poly.insert(Integer.valueOf(integers[1]),Integer.valueOf(integers[2]));
+					System.out.println(poly.toString());
+					break;
+					
+				case "product":
+					System.out.println("Operation: Product");
+					System.out.println(poly.product());
+					System.out.println(poly.toString());
+					break;
+					
+				case "delete":
+					System.out.println("Operation: Delete");
+					poly.delete(Integer.valueOf(integers[1]),Integer.valueOf(integers[2]));
+					System.out.println(poly.toString());
+	
+				}
+	
+			}
+		}
+	
+	}
